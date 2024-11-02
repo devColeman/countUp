@@ -3,7 +3,7 @@ body {
     color: #A8E6A3;
 }
 
-h1, h2, div, h4, h5{
+h1, h2, div, h4, h5, h6{
     display: flex;
     justify-content: center;
 

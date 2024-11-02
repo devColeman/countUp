@@ -3,6 +3,7 @@
  document.querySelector("#reset").addEventListener('click', reset)
  document.querySelector("#submit").addEventListener('click', add)
  document.querySelector("#submit2").addEventListener('click', remove)
+ let h6 = document.querySelector('h6')
  let input = document.querySelector('#input1')
  let input1 = document.querySelector('#input2')
  let h2 = document.querySelector('h2')
@@ -17,8 +18,11 @@
         let f =  localStorage.getItem('count')
         localStorage.setItem('count', Number(f) + Number(input.value))
         h2.innerHTML = Number(f) + Number(input.value)
+        input.value = ''
+        h6.innerHTML = ''
     }else{
-        alert('That is not a number please try again')
+        h6.innerHTML = 'That is not a number please try again'
+        input.value = ''
     }
  }
 
@@ -29,8 +33,11 @@
         let f =  localStorage.getItem('count')
         localStorage.setItem('count', Number(f) - Number(input1.value))
         h2.innerHTML = Number(f) - Number(input1.value)
+        input1.value = ''
+        h6.innerHTML = ''
     }else{
-        alert('That is not a number please try again')
+        h6.innerHTML = 'That is not a number please try again'
+        input1.value = ''
     }
  }
 
